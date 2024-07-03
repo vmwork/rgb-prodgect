@@ -1,12 +1,17 @@
 body {
     background-color: #242731;
+    background-image: url('/src/svg/css/technology.svg');
     color: #ffffff;
 
 }
 @media screen and (min-width: 1040px) {
 
     main {
-        display: flex;
+        // display: flex;
+        // justify-content: center;
+        position: relative;
+        min-width: 100vh;
+        // padding-bottom: 160px;
        
     }
   }
