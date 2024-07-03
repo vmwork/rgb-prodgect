@@ -8,11 +8,14 @@
         align-items: center;
         background-color: #4252D1;
         color: #ffffff;
-        padding: 3px 7px ;
+        padding: 5px 10px ;
         font-weight: 500;
         border-radius: 3px;
         font-size: 14px;
         margin-right: 15px;
+    }
+    .vebinar{
+        font-size: 12px;
     }
     .description-icon {
         margin-right: 5px;
@@ -21,18 +24,19 @@
         text-align: center;
         h1 {
             color: #FF3459;
-            font-size: 46px;
+            font-size: 52px;
             line-height: 60.59px;
             font-weight: 800;
         }
     }
     .from-null{
         display: flex;
-       justify-content: center;
        align-items: center;
+       margin-left: 5px;
        div {
         background-color: #FF3459;
-        padding: 5px;
+        padding: 7px 11px;
+        font-size: 16px;
         font-weight: 800;
         transform: rotate(-3.49deg);
         border-radius: 4px;
@@ -45,7 +49,7 @@
        }
     }
     .description-text{
-        margin-top: 20px;
+        margin-top: 15px;
         max-width: 328px;
 span {
 font-size: 14px;
