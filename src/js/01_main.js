@@ -6,9 +6,7 @@ const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
 const sendTelegram = async (name, phone, email) => {
   // testerRGBBot
-  console.log(name, phone, email);
   const text = `Заявка от ${name}!\nEmail: ${email}\nТелефон: ${phone}`;
-  console.log(text);
   try {
     const response = await fetch(API, {
       method: "POST",
@@ -26,13 +24,19 @@ const sendTelegram = async (name, phone, email) => {
     } else {
       throw new Error(response.statusText);
     }
-    console.log(error);
   } catch (error) {
     console.error(error);
     alert("Анкета не отправлена! Попробуйте позже.");
-  } finally {
-    formBtn.textContent = "Отправить";
   }
+};
+const validateEmail = (email) => {
+  var re =
+    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+  return re.test(String(email).toLowerCase());
+};
+const validatePhone = (phone) => {
+  var re = /^(\+3|)[0-9]{10,11}$/;
+  return re.test(String(phone).toLowerCase());
 };
 
 const formValidate = () => {
@@ -40,17 +44,14 @@ const formValidate = () => {
   const userPhone = document.querySelector(".user-phone");
   const userEmail = document.querySelector(".user-email");
   const regexpPhone = /^(\+3|)[0-9]{10,11}$/;
-  const regexpEmail = /[^|\w](\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)/gm;
-  sendTelegram(userName.value, userPhone.value, userEmail.value);
 
-  if (userName.value !== "" && userPhone.value !== "" && userEmail.value) {
-    regexpEmail.test(userEmail.value);
-    if (!regexpPhone.test(userPhone.value)) {
-      if (!regexpEmail.test(userEmail.value)) {
+  if (userName.value !== "") {
+    if (validatePhone(userPhone.value)) {
+      if (validateEmail(userEmail.value)) {
         sendTelegram(userName.value, userPhone.value, userEmail.value);
+        return;
       }
     }
-  } else {
-    alert("Заполните форму");
   }
+  alert("Заполните форму");
 };
