@@ -67,3 +67,66 @@ p{
 
     }
 }
+
+
+@media screen and (min-width: 1040px){
+    .description{
+        // width: 1440px;
+        align-items: start;
+        .description-head{
+          margin-top: 98px;  
+        } 
+        .description-main{
+            text-align: left;
+        }
+        .from-null{
+            align-items: start;
+            margin-left: -7px;
+        }
+        .vebinar{
+            font-size: 16px;
+            width: 80px;
+        }
+        .description-main{ 
+            h1{
+                   font-size: 77px;
+            font-weight: 800;
+            line-height: 94.33px; 
+            }
+        
+             
+        }
+        .from-null {
+            div{
+            font-size: 23.64px;
+            font-weight: 800;
+            line-height: 28.96px;
+            }
+            span {
+                font-size: 21.95px;
+                font-weight: 600;
+                line-height: 26.19px;
+                margin-top: 10px;
+                margin-left: 20px;
+                 
+            }
+        }
+        .description-text{
+            margin-top: 23px;
+            max-width: 419px;
+            span{
+               font-size: 18px;
+            font-weight: 400;
+            line-height: 26.64px; 
+            }
+            p{
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 26.64px; 
+            }
+            
+
+        }
+
+    }
+}

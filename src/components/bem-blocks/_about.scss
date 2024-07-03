@@ -50,5 +50,27 @@
     .about-mobile {
         display: none;
     }
+    .about-desctop{
+        .about-wrapper{
+            padding-top: 45px;
+            width: 375px;
+            .about-bonus{
+                margin-top: 16px;
+
+            }
+            .about-bonus, .about-man{
+                justify-content: start;
+            }
+            .about-bonus-description, .about-man-description{
+                margin-left: 20px;
+            width: 310px;
+            span, p {
+            width: 310px;
+
+            }
+
+            }
+        }
+    }
     
   }

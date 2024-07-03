@@ -1,4 +1,9 @@
-.left-block{
-    display: flex;
-    flex-direction: column;
+
+@media screen and (min-width: 1039px){
+    .left-block{
+        display: flex;
+        flex-direction: column;
+        margin-left: 56px;
+    
+    }
 }
