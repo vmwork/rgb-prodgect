@@ -124,6 +124,11 @@ p {
 }
 .helper-phone {
     position: absolute;
-    top: 243px;
+    top: 213px;
     font-size: 10px;
+}
+@media screen and (min-width: 1039px) {
+    .helper-phone {
+        top: 243px;
+    }
 }
